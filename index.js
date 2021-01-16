@@ -18,7 +18,7 @@ tado.login(process.env.TADO_USERNAME, process.env.TADO_PASSWORD).then((token) =>
         resp.forEach(zone => {
 
             tado.getZoneState(538749, zone.id).then(state => {
-                bucket.push("Tado Temperature " + zone.name, state.sensorDataPoints.insideTemperature.celsius);
+                bucket.push("Tado Temperature - " + zone.name, state.sensorDataPoints.insideTemperature.celsius);
             });
         });
     });
