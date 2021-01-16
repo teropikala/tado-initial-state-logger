@@ -7,9 +7,9 @@ Log temperature data from Tado thermostats to Initial State
 ```
 TADO_USERNAME=(Tado username / email)
 TADO_PASSWORD=(Tado password)
-TADO_HOME_ID=(Tado home id, check for basic API response)
+TADO_HOME_ID=(Tado home id, check API calls in my.tado.com)
 
-IS_BUCKET_KEY=(buckey key from Initial State)
+IS_BUCKET_KEY=(bucket key from Initial State)
 IS_ACCESS_KEY=(access key from Initial State)
 ```
 
