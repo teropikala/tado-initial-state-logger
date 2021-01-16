@@ -14,10 +14,9 @@ var tado = new Tado();
 // Login to the Tado Web API
 tado.login(process.env.TADO_USERNAME, process.env.TADO_PASSWORD).then((token) => {
 
-    tado.getZones(process.env.TADO_HOME_ID).then(resp => {
-        resp.forEach(zone => {
-
-            tado.getZoneState(538749, zone.id).then(state => {
+    tado.getZones(process.env.TADO_HOME_ID).then(zones => {
+        zones.forEach(zone => {
+            tado.getZoneState(process.env.TADO_HOME_ID, zone.id).then(state => {
                 bucket.push("Tado Temperature - " + zone.name, state.sensorDataPoints.insideTemperature.celsius);
             });
         });
