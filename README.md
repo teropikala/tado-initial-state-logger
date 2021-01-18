@@ -16,6 +16,6 @@ IS_ACCESS_KEY=(access key from Initial State)
 # Run with pm2 every 5 minutes 
 
 ```
-pm2 start "node index.js" --cron '*/5 * * * *' --no-autorestart --name "Tado Initial State logger"
+pm2 start "node index.js" --cron '*/5 * * * *' --no-autorestart --name "Tado Initial State logger" --interpreter=/root/.nvm/versions/node/v15.6.0/bin/node
 ```
 
